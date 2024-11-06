@@ -204,7 +204,7 @@ const saveRecentLocation = (name: string, coords: string) => {
 };
 
 const renderRecentLocations = () => {
-    const recentLocations = JSON.parse(localStorage.getItem('recentLocations') || '[]') as RecentLocation[];
+    const recentLocations : RecentLocation[] = JSON.parse(localStorage.getItem('recentLocations') || '[]');
     const recentLocationsContainer = document.getElementById('recentLocationsContainer') as HTMLDivElement;
 
     recentLocationsContainer.innerHTML = '';
