@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ski Resort Weather App</title>
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+
+<body>
+    <div class="forecast-container">
+        <section class="h1">
+            <h1>Ski Resort Weather</h1>
+        </section>
+
+        <section class="selectLocation-container">
+            <label for="location">Select Location:</label>
+            <select class="select-container" id="location">
+                <option id="are" value="63.4236,13.0963">Åre, Sweden</option>
+                <option id="salen" value="61.1278,12.7850">Sälen, Sweden</option>
+                <option id="vemdalen" value="62.6333,14.3075">Vemdalen, Sweden</option>
+                <option id="hemsedal" value="60.6772,8.4625">Hemsedal, Norway</option>
+                <option id="idrefjall" value="61.7743,12.4680">Idre Fjäll, Sweden</option>
+                <option id="branas" value="60.4547,12.5481">Branäs, Sweden</option>
+                <option id="trysil" value="62.5967,9.1628">Trysil, Norway</option>
+                <option id="safsen" value="60.7306,14.1512">Säfsen, Sweden</option>
+                <option id="fjatervalen" value="61.0790,14.4575">Fjätervålen, Sweden</option>
+                <option id="langberget" value="60.3044,13.5986">Långberget, Sweden</option>
+                <option id="kvitfjell" value="62.5152,11.3482">Kvitfjell, Norway</option>
+                <option id="hovfjallet" value="60.6566,12.3831">Hovfjället, Sweden</option>
+                <option id="fjellsjoen" value="62.1826,9.4585">Fjellsjøen, Norway</option>
+                <option id="grovelsjon" value="61.6401,12.4352">Grövelsjön, Sweden</option>
+                <option id="myrkdalen" value="60.6772,8.4625">Myrkdalen, Norway</option>
+                <option id="bjorli" value="62.3060,8.6336">Bjorli, Norway</option>
+                <option id="valadalensfjallstation" value="60.8923,12.4790">Vålådalens Fjällstation, Sweden</option>
+                <option id="rommealpin" value="60.4547,12.5481">Romme Alpin, Sweden</option>
+                <option id="oppdal" value="61.2745,9.6014">Oppdal, Norway</option>
+                <option id="kongsberg" value="61.3958,10.0313">Kongsberg, Norway</option>
+                <option id="salen_tandadalen" value="62.6333,14.3075">Sälen (Tandådalen), Sweden</option>
+                <option id="hagfors" value="60.3024,13.6619">Hagfors, Sweden</option>
+                <option id="lillehammer" value="61.7726,9.0673">Lillehammer, Norway</option>
+                <option id="geilo" value="60.6793,8.5205">Geilo, Norway</option>
+                <option id="hafjell" value="61.4212,9.5768">Hafjell, Norway</option>
+                <option id="branassweden" value="60.4547,12.5481">Branäs, Sweden</option>
+                <option id="hoytoglavt" value="62.3075,8.8168">Høyt og Lavt, Norway</option>
+                <option id="norefjell" value="61.8741,9.1983">Norefjell, Norway</option>
+                <option id="stoten" value="61.5013,8.5804">Stöten, Sweden</option>
+                <option id="safsensweden" value="60.7333,15.5000">Säfsen, Sweden</option>
+                <option id="fjellkysten" value="61.0923,11.7844">Fjellkysten, Norway</option>
+                <option id="kongsbergnorway" value="60.4567,10.1901">Kongsberg, Norway</option>
+                <option id="hastrasweden" value="60.8940,14.4719">Sälen (Hästra), Sweden</option>
+                <option id="gorvalnsweden" value="60.4321,14.1540">Sälen (Görväln), Sweden</option>
+                <option id="myrkdalenagain" value="60.6772,8.4625">Myrkdalen, Norway</option>
+                <option id="rondane" value="61.3201,9.4863">Rondane, Norway</option>
+                <option id="stranda" value="62.6390,8.0811">Stranda, Norway</option>
+                <option id="myrkdalenanother" value="61.2000,12.5000">Myrkdalen, Norway</option>
+                <option id="narvikfjellet" value="68.4383,17.4272">Narvikfjellet, Norway</option>
+            </select>
+
+            <button class="getWeather-btn" id="getWeather">
+                Get Weather
+            </button>
+        </section>
+
+        <section class="recentlyViewed-container" id="recentLocationsContainer">
+        </section>
+
+        <section class="weatherDisplay-container" id="weatherDisplay"></section>
+
+        <script src="dist/index.js" type="module"></script>
+    </div>
+</body>
+
+</html>
