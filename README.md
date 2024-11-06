@@ -1,3 +1,3 @@
 # skiResortWeather
 First full-stack app using Typescript.
-Information hämtat från SMHIs open API.
+Information collected from SMHIs open API.
