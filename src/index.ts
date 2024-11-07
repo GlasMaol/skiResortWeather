@@ -135,7 +135,7 @@ const fetchFiveDayForecast = async (latitude: number, longitude: number, resortN
 
         weatherDisplay.appendChild(forecastContainer);
     } catch (error) {
-        if (error instanceof Error) {
+        if (error instanceof Error) { //instanceOf kollar om error är en instans av JS error class. Används inte det så får message en type av ANY och blir fel.
             console.error("Error fetching weather data:", error.message);
             weatherDisplay.innerHTML = `<p>Error fetching weather data: ${error.message}</p>`;
         } else {
@@ -187,7 +187,7 @@ const displayHourlyForecast = (dayData: TimeSeriesEntry[], _date: string): void 
 };
 
 //sparar option val i localstorage
-const saveRecentLocation = (name: string, coords: string) => {
+const saveRecentLocation = (name: string, coords: string) : void => {
     let recentLocations = JSON.parse(localStorage.getItem('recentLocations') || '[]') as RecentLocation[];
 
     recentLocations = recentLocations.filter((location: RecentLocation) => location.coords !== coords);
@@ -203,7 +203,7 @@ const saveRecentLocation = (name: string, coords: string) => {
     renderRecentLocations();
 };
 
-const renderRecentLocations = () => {
+const renderRecentLocations = () : void => {
     const recentLocations : RecentLocation[] = JSON.parse(localStorage.getItem('recentLocations') || '[]');
     const recentLocationsContainer = document.getElementById('recentLocationsContainer') as HTMLDivElement;
 
